@@ -7,6 +7,9 @@ import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
+/**
+ * Spring Data JPA repository for Product
+ */
 interface ProductRepository extends JpaRepository<Product, Long> {
   Optional<Product> findByCode(String code);
 

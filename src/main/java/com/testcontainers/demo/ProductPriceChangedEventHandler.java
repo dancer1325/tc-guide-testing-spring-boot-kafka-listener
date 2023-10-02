@@ -20,6 +20,10 @@ class ProductPriceChangedEventHandler {
     this.productRepository = productRepository;
   }
 
+  /**
+   * Kafka event listener which updates in the database
+   * @param event
+   */
   @KafkaListener(topics = "product-price-changes", groupId = "demo")
   public void handle(ProductPriceChangedEvent event) {
     log.info(
